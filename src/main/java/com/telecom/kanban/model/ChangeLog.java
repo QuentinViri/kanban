@@ -30,43 +30,4 @@ public class ChangeLog {
         this.target = target;
     }
 
-    public Long getId() {
-        return id;
-    }
-
-    public void setId(Long id) {
-        this.id = id;
-    }
-
-    public Date getOccured() {
-        return occured;
-    }
-
-    public void setOccured(Date occured) {
-        this.occured = occured;
-    }
-
-    public Task getTask() {
-        return task;
-    }
-
-    public void setTask(Task task) {
-        this.task = task;
-    }
-
-    public TaskStatus getSource() {
-        return source;
-    }
-
-    public void setSource(TaskStatus source) {
-        this.source = source;
-    }
-
-    public TaskStatus getTarget() {
-        return target;
-    }
-
-    public void setTarget(TaskStatus target) {
-        this.target = target;
-    }
 }

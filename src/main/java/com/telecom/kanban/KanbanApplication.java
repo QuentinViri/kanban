@@ -60,7 +60,6 @@ public class KanbanApplication {
 	}
 	public void populateTaskStatus(TaskStatusService taskStatusService){
 		List<TaskStatus> taskStatuses=new ArrayList<>();
-		taskStatuses.add(new TaskStatus(("Backlog")));
 		taskStatuses.add(new TaskStatus(("To Do")));
 		taskStatuses.add(new TaskStatus(("In Progress")));
 		taskStatuses.add(new TaskStatus(("Testing")));

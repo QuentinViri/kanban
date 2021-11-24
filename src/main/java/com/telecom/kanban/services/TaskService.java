@@ -25,7 +25,6 @@ public class TaskService {
     {
         TaskStatus taskStatus = task.getTaskStatus();
         TaskStatus nextStatus = switch (taskStatus.getLabel()) {
-            case "Backlog" -> taskStatusService.findTaskStatusByLabel("To Do").iterator().next();
             case "To Do" -> taskStatusService.findTaskStatusByLabel("In Progress").iterator().next();
             case "In Progress" -> taskStatusService.findTaskStatusByLabel("Testing").iterator().next();
             case "Testing" -> taskStatusService.findTaskStatusByLabel("Done").iterator().next();
@@ -43,7 +42,6 @@ public class TaskService {
             case "Done" -> taskStatusService.findTaskStatusByLabel("Testing").iterator().next();
             case "Testing" -> taskStatusService.findTaskStatusByLabel("In Progress").iterator().next();
             case "In Progress" -> taskStatusService.findTaskStatusByLabel("To Do").iterator().next();
-            case "To Do" -> taskStatusService.findTaskStatusByLabel("Backlog").iterator().next();
             default -> null;
         };
         if(previousStatus!=null){
